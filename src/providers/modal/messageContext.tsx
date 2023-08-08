@@ -1,8 +1,8 @@
 import { createContext, ReactNode, useState } from 'react'
 
 export type IType =  'info' | 'warning' | 'error' ;
-export type MessageContextType = (info:Info) => void
 type Info = { message: string, type: IType }
+export type MessageContextType = (info:Info) => void
 
 const def: MessageContextType = (info) => {}
 
