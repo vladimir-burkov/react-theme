@@ -1,14 +1,19 @@
-import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from'./App.module.scss';
-import ChildComponent from './childComponent';
-
-console.log(styles);
 
 function App() {
+  const navigate = useNavigate();
+
+  const goToChild = () => {
+    navigate('child')
+  }
+
+
   return (
     <div className={styles.app}>
       heelloo
-      <ChildComponent/>
+      <Link to="/child">Contact</Link>
+      <button onClick={goToChild}>Contact</button>
     </div>
   );
 }

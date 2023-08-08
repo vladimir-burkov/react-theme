@@ -1,4 +1,4 @@
-import { ComponentProps, createContext, ReactNode, useState } from 'react'
+import { createContext, ReactNode, useState } from 'react'
 
 export type IType =  'info' | 'warning' | 'error' ;
 export type MessageContextType = (info:Info) => void

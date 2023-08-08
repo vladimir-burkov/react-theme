@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './components/App';
-import { MessageProvider } from './components/exampleContext';
+import { MessageProvider } from './providers/modal/messageContext';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './providers/router/app-router';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <MessageProvider>
-      <App/>
+      <RouterProvider router={router} />
     </MessageProvider>
   </React.StrictMode>
 );

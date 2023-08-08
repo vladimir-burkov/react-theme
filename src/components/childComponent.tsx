@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { MessageContext } from "./exampleContext"
+import { MessageContext } from "../providers/modal/messageContext"
 
 export default function ChildComponent(props: any) {
     const setGlobalError = useContext(MessageContext)
